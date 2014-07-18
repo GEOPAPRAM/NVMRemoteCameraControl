@@ -15,8 +15,6 @@ namespace SelfHost
         static readonly Uri _baseAddress = new Uri("http://localhost:50231/");
         static readonly Uri _address = new Uri(_baseAddress, "/api/camera/moveleft");
 
-
-
         static void Main(string[] args)
         {
             HttpSelfHostServer server = null;
@@ -24,6 +22,8 @@ namespace SelfHost
             {
                 // Set up server configuration
                 HttpSelfHostConfiguration config = new HttpSelfHostConfiguration(_baseAddress);
+
+                config.EnableCors();
 
                 config.Routes.MapHttpRoute(
                     name: "MoveLeft",

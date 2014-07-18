@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace NvmRemoteCameraControlServer
 {
-
+    [EnableCors("*", "*", "GET")]
     public class CameraController : ApiController
     {
         const string DeviceName = "ConferenceCam CC3000e Camera";
@@ -78,34 +79,69 @@ namespace NvmRemoteCameraControlServer
         }
 
         [HttpGet]
-        [ActionName("gonuts")]
-        public void GoNuts()
+        [ActionName("swingleft")]
+        public void SwingLeft()
         {
-            _myCamera.Zoom(5);
-            _myCamera.Zoom(10);
-            _myCamera.Move(5, 10);
-            _myCamera.Move(-10, -50);
-            _myCamera.Move(10, 20);
-            _myCamera.Zoom(20);
-            _myCamera.Zoom(-20);
-            _myCamera.Zoom(10);
-            _myCamera.Zoom(-10);
-            _myCamera.Move(0, -5);
-            _myCamera.Move(0, -5);
-            _myCamera.Move(0, -5);
-            _myCamera.Zoom(-5);
-            _myCamera.Zoom(-5);
-            _myCamera.Zoom(-5);
-            _myCamera.Move(0, -5);
-            _myCamera.Move(0, -5);
-            _myCamera.Move(0, -5);
-            _myCamera.Zoom(-5);
-            _myCamera.Zoom(-5);
-            _myCamera.Zoom(-5);
-            _myCamera.Zoom(-5);
-
-            _myCamera.Zoom(-5);
-            Console.WriteLine("zoom out");
+            _myCamera.Move(-50, 0);
+            Console.WriteLine("swing left");
         }
+
+        [HttpGet]
+        [ActionName("swingright")]
+        public void SwingRight()
+        {
+            _myCamera.Move(50, 0);
+            Console.WriteLine("swing right");
+        }
+
+        [HttpGet]
+        [ActionName("swingup")]
+        public void SwingUp()
+        {
+            _myCamera.Move(0, 50);
+            Console.WriteLine("swing up");
+        }
+
+        [HttpGet]
+        [ActionName("swingdown")]
+        public void SwingDown()
+        {
+            _myCamera.Move(0, -50);
+            Console.WriteLine("swing down");
+        }
+
+        [HttpGet]
+        [ActionName("nudgeleft")]
+        public void NudgeLeft()
+        {
+            _myCamera.Move(-1, 0);
+            Console.WriteLine("nudge left");
+        }
+
+        [HttpGet]
+        [ActionName("nudgeright")]
+        public void NudgeRight()
+        {
+            _myCamera.Move(1, 0);
+            Console.WriteLine("nudge right");
+        }
+
+        [HttpGet]
+        [ActionName("nudgeup")]
+        public void NudgeUp()
+        {
+            _myCamera.Move(0, 1);
+            Console.WriteLine("Nudge up");
+        }
+
+        [HttpGet]
+        [ActionName("nudgedown")]
+        public void NudgeDown()
+        {
+            _myCamera.Move(0, -1);
+            Console.WriteLine("nudge down");
+        }
+
+        
     }
 }

@@ -20,3 +20,6 @@ C:\Repository\Hackaton\NvmCamHack\NvmRemoteCameraControlServer\NvmRemoteCameraCo
 C:\Repository\Hackaton\NvmCamHack\NvmRemoteCameraControlServer\NvmRemoteCameraControlServer\obj\Debug\NvmRemoteCameraControlServer.exe
 C:\Repository\Hackaton\NvmCamHack\NvmRemoteCameraControlServer\NvmRemoteCameraControlServer\obj\Debug\NvmRemoteCameraControlServer.pdb
 C:\Repository\Hackaton\NvmCamHack\NvmRemoteCameraControlServer\NvmRemoteCameraControlServer\bin\Debug\PTZDevice.pdb
+C:\Repository\Hackaton\NvmCamHack\NvmRemoteCameraControlServer\NvmRemoteCameraControlServer\bin\Debug\System.Web.Cors.dll
+C:\Repository\Hackaton\NvmCamHack\NvmRemoteCameraControlServer\NvmRemoteCameraControlServer\bin\Debug\System.Web.Http.Cors.dll
+C:\Repository\Hackaton\NvmCamHack\NvmRemoteCameraControlServer\NvmRemoteCameraControlServer\bin\Debug\System.Web.Http.Cors.xml
